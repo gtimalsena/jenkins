@@ -3,6 +3,7 @@ pipeline {
     stages{
         stage('test'){
             steps{
+		deleteDir()
                 sh 'mkdir -p archive'
                 sh 'echo test > archive/test.txt'
                 script{
